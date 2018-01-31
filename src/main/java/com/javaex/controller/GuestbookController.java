@@ -42,7 +42,7 @@ public class GuestbookController {
 	public String deleteform(@PathVariable("no") int no, Model model) {
 		System.out.println("deleteform 진입");
 		
-		model.addAttribute("no",no);
+		model.addAttribute("no",no); //addAttribute는 setAttribute 와 비슷한 기능.
 		return "deleteform";
 	}
 	
