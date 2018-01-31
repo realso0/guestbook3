@@ -38,8 +38,8 @@ public class GuestbookController {
 		return "redirect:list";
 	}
 	
-	@RequestMapping(value="/deleteform&no={no}", method=RequestMethod.GET)
-	public String deleteform(@PathVariable("no") int no, Model model) {
+	@RequestMapping(value="/deleteform", method=RequestMethod.GET)
+	public String deleteform(@RequestParam("no") int no, Model model) {
 		System.out.println("deleteform 진입");
 		
 		model.addAttribute("no",no); //addAttribute는 setAttribute 와 비슷한 기능.
